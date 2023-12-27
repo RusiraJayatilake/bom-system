@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOM</title>
+        <link rel="stylesheet" href="../static/css/index.css">
+    </head>
+    <body>
+        <h1>BOM System - Automobile</h1>
+        <h4><a href = "{{ url_for('views.displayAllBOMS') }}">All BOM Data</a></h4>
+        <h2>Add New BOM Entry</h2>
+
+        <form action="{{  url_for('views.index') }}" method="post">
+            <!-- CSRF Token (add CSRF protection if using a web framework) -->
+            <!-- Part Number -->
+            <label for="part_number">Part Number:</label>
+            <input type="text" id="part_number" name="part_number" required>
+
+            <!-- Description -->
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description">
+
+            <!-- Quantity -->
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity">
+
+            <!-- Unit Measure -->
+            <label for="unit_measure">Unit Measure:</label>
+            <input type="text" id="unit_measure" name="unit_measure">
+
+            <!-- Material -->
+            <label for="material">Material:</label>
+            <input type="text" id="material" name="material">
+
+            <!-- Weight -->
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" name="weight">
+
+            <!-- Cost -->
+            <label for="cost">Cost:</label>
+            <input type="number" id="cost" name="cost">
+
+            <!-- Vendor/Supplier -->
+            <label for="vendor_supplier">Vendor/Supplier:</label>
+            <input type="text" id="vendor_supplier" name="vendor_supplier">
+
+            <!-- Lead Time -->
+            <label for="lead_time">Lead Time:</label>
+            <input type="number" id="lead_time" name="lead_time">
+
+            <!-- Revision Level -->
+            <label for="revision_level">Revision Level:</label>
+            <select id="revision_level" name="revision_level">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+
+            <!-- Assembly Code -->
+            <label for="assembly_code">Assembly Code:</label>
+            <input type="text" id="assembly_code" name="assembly_code">
+
+            <!-- Notes -->
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <!-- Add more input fields for additional attributes -->
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+        
+    </body>
+</html>

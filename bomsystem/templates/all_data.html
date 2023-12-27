@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All BOM Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>All BOM Data</h2>
+<h4>BOMs (<a href = "{{ url_for('views.index') }}">Add BOM</a>)</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>BOM ID</th>
+            <th>Part Number</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Measure</th>
+            <th>Material</th>
+            <th>Weight</th>
+            <th>Cost</th>
+            <th>Vendor/Supplier</th>
+            <th>Lead Time</th>
+            <th>Revision Level</th>
+            <th>Assembly Code</th>
+            <th>Notes</th>
+            <!-- Add more table headers for additional attributes -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in boms %}
+            <tr>
+                <td>{{ entry.bom_id }}</td>
+                <td>{{ entry.part_number }}</td>
+                <td>{{ entry.description }}</td>
+                <td>{{ entry.quantity }}</td>
+                <td>{{ entry.unit_measure }}</td>
+                <td>{{ entry.material }}</td>
+                <td>{{ entry.weight }}</td>
+                <td>{{ entry.cost }}</td>
+                <td>{{ entry.vendor_supplier }}</td>
+                <td>{{ entry.lead_time }}</td>
+                <td>{{ entry.revision_level }}</td>
+                <td>{{ entry.assembly_code }}</td>
+                <td>{{ entry.notes }}</td>
+                <!-- Add more table cells for additional attributes -->
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

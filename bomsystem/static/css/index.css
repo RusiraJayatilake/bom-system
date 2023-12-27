@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Add more styles as needed */
+
+
+/* dropdown */
+/* Style for the dropdown container */
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Adjust the font size as needed */
+    background-color: #fff;
+    color: #333;
+}
+
+/* Style for the dropdown options */
+select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Style for the dropdown when focused */
+select:focus {
+    outline: none;
+    border-color: #4caf50; /* Change the border color on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.7); /* Add a subtle box shadow on focus */
+}
+
+/* Style for the dropdown arrow */
+select::-ms-expand {
+    display: none; /* Hide the arrow in IE */
+}
+
+/* Style for the dropdown arrow in modern browsers */
+select::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Style for the dropdown options on hover */
+select option:hover {
+    background-color: #e0e0e0;
+}
