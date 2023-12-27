@@ -36,4 +36,15 @@ def displayAllBOMS():
         bom = BOM.query.all()
         return render_template('all_data.html', boms=bom)
 
+
+@views.route('/bom/delete/<int:id>', methods=['POST'])
+def bom_delete(id):
+    bom = BOM.query.get(id)
+    if bom:
+        msg_text = f'Merchant {bom.bom_id} successfully removed'
+        db.session.delete(bom)
+        db.session.commit()
+        print(msg_text)
+
+        return redirect(url_for('views.displayAllBOMS'))
     
