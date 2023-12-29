@@ -1,13 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-h2 {
+/* Headers and fonts */
+h1, h2, h4, a{
     text-align: center;
+}
+
+h1 {
     color: #333;
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 0;
+}
+
+h4 {
+    color: #555;
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+h2 {
+    color: #333;
+    margin: 20px 0;
 }
 
 form {
@@ -34,6 +62,10 @@ input, textarea {
     border-radius: 4px;
 }
 
+textarea {
+    resize: none;
+}
+
 .submit-btn {
     background-color: #4caf50;
     color: #fff;
@@ -41,6 +73,7 @@ input, textarea {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .submit-btn:hover {

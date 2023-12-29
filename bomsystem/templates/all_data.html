@@ -9,7 +9,7 @@
     <body>
 
         <h2>All BOM Data</h2>
-        <h4>BOMs (<a href = "{{ url_for('views.index') }}">Add BOM</a>)</h4>
+        <h4><a href = "{{ url_for('views.index') }}">Add BOM</a></h4>
 
         <table>
             <thead>
@@ -49,12 +49,17 @@
                         <td>{{ entry.notes }}</td>
                         <td>
                             <!-- Form for deleting BOM entry -->
-                            <form class="delete-form" action="{{ url_for('views.bom_delete', id=entry.bom_id) }}" method="post">
-                               <!-- <input type="hidden" name="_method" value="delete"> -->
-                               <input type="submit" value="Update">
-                               <input type="submit" value="Delete">
+                            <form>
+                                <input type="submit" value="Update">
                             </form>
+                            
+                            <!-- Form for deleting BOM entry -->
+                            <form class="delete-form" action="{{ url_for('views.bom_delete', id=entry.bom_id) }}" method="post">
+                               <input type="submit" value="Delete">
+                            </form>                            
+
                         </td>
+                        
                         <!-- Add more table cells for additional attributes -->
                     </tr>
                 {% endfor %}

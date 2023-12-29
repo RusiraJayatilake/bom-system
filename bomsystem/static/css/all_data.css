@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -19,6 +26,7 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+/* Input buttons for delete and update css */
 input[type="submit"] {
     padding: 8px 16px;
     margin: 5px;
@@ -42,4 +50,9 @@ input[value="Delete"] {
     content: "";
     clear: both;
     display: table;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
 }

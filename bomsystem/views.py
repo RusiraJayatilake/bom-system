@@ -41,10 +41,14 @@ def displayAllBOMS():
 def bom_delete(id):
     bom = BOM.query.get(id)
     if bom:
-        msg_text = f'Merchant {bom.bom_id} successfully removed'
+        msg_text = f'BOM {bom.bom_id} successfully removed'
         db.session.delete(bom)
         db.session.commit()
         print(msg_text)
 
         return redirect(url_for('views.displayAllBOMS'))
     
+
+# @views.route('/bom/update/<int:id>', method=['POST'])
+# def bom_update(id):
+#     pass
